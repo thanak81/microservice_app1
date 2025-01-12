@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage ("Testing"){
             steps{
-                echo "hello frontend"
+                script {
+                   sh "echo hello-frontend"
+                }
             }
         }
     }
