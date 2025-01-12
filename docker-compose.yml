@@ -1,0 +1,25 @@
+services:
+  catalogue:
+    image: thanak81/catalogue
+    build: 
+      context: ./catalogue
+    ports: 
+      - 5000:5000
+  frontend:
+    image: thanak81/frontend
+    build: 
+      context: ./frontend
+    ports:
+      - 3000:3000
+  recomendation:
+    image: thanak81/recommendation
+    build:
+      context: ./recommendation
+    ports:
+      - 8082:8080
+  voting:
+    image: thanak81/voting
+    build: 
+      context: ./voting
+    ports:
+      - 8081:8080
