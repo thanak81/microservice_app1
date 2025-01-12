@@ -22,7 +22,7 @@ router.get('/:origamiId/votes', async (req, res, next) => {
         const response = await axios.get(`${VOTING_SERVICE_BASE_URL}/api/origamis/${req.params.origamiId}/votes`);
         res.status(200).json(response.data);
     } catch (error) {
-        console.error('Error fetching vote count los:', error);
+        console.error('Error fetching vote count:', error);
         res.status(500).send('Internal Server Error');
     }
 });
