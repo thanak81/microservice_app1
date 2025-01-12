@@ -9,6 +9,8 @@ pipeline {
                         dir ("/frontend"){
                             load "Jenkinsfile"
                         }
+                    }else{
+                        echo "No change detected"
                     }
                 }
             }
